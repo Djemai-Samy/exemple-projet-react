@@ -1,14 +1,16 @@
 import { NavLink } from "react-router";
-import { Menu } from 'lucide-react'
+import { House, Menu, Milestone } from 'lucide-react'
 import { useState } from "react";
 const navLinks = [
   {
     path: "/",
-    label: "Accueil"
+    label: "Accueil",
+    Icon: <House size={20}/>
   },
   {
     path: "/about",
-    label: "A propos"
+    label: "A propos",
+    Icon: <Milestone size={20}/>
   }
 ]
 export default function Navbar() {
@@ -31,7 +33,12 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
             >
-              {link.label}
+              <div className="flex gap-2 items-center">
+                {link.Icon}
+                <span>
+                  {link.label}
+                </span>
+              </div>
             </NavLink>
           ))
         }
