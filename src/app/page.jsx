@@ -1,6 +1,12 @@
+import TodoList from "../features/todos/components/TodoList";
 
 export default function page() {
   return (
-    <div>page</div>
+    <main>
+      <h1>Todos - Accueil</h1>
+
+      <TodoList />
+
+    </main>
   )
 }
